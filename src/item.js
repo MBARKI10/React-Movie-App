@@ -2,13 +2,16 @@ import React, {Component} from 'react';
 import {Card,CardImg,CardBody} from 'reactstrap';
 import StarRatingComponent from 'react-star-rating-component';
 
+
 import './item.css';
 
 
 class Item extends Component {
     constructor(props) {
         super(props);
-        this.state = {  }
+        this.state = { 
+
+         }
     }
 
     render() { 
@@ -36,7 +39,9 @@ class Item extends Component {
   </h3>
   
   </CardBody>
-</Card>;
+</Card>
+<button>Remove</button>
+
 </div>
 
 </div>
