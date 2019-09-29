@@ -15,8 +15,8 @@ class Item extends Component {
     }
 
     render() { 
-      const {item} =this.props
-        return ( 
+      const {item,id,remove} =this.props
+        return (
         <div className='item'>
    
       <div className="use-card">
@@ -40,7 +40,7 @@ class Item extends Component {
   
   </CardBody>
 </Card>
-<button>Remove</button>
+<button onClick={()=>remove(id)}>Remove</button>
 
 </div>
 

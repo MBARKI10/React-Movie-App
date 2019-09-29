@@ -22,6 +22,7 @@ class Modale extends React.Component {
    handleShow() {
      this.setState({ show: true });
    }
+
    AddMymovie=()=>{
      this.props.addmovie(
        {

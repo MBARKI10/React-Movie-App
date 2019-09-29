@@ -10,8 +10,6 @@ import './App.css';
 const newstab=[{
   id:'1',
   title:'Inception',
-  
-
   article:'https://static.rogerebert.com/uploads/movie/movie_poster/inception-2010/large_ziKvu3Th9l1wN2aIeVj5ElpBqFu.jpg',
   rating:6
   },
@@ -19,7 +17,6 @@ const newstab=[{
   {
   id:'2',
   title:'Shawshank redemption',
- 
   article:'https://is5-ssl.mzstatic.com/image/thumb/Video2/v4/14/3f/32/143f324a-24ed-fa7d-cbb0-25a65d12dba0/pr_source.lsr/268x0w.png',
   rating:7
   
@@ -27,7 +24,6 @@ const newstab=[{
   {
   id:'3',
   title:'Blade runner',
-  
   article:'http://fr.web.img5.acsta.net/c_215_290/pictures/17/08/24/15/18/597734.jpg',
   rating:4
   
@@ -35,7 +31,6 @@ const newstab=[{
   {
   id:'4',
   title:'Overdrive',
-  
   article:'https://images-na.ssl-images-amazon.com/images/I/91Mdq6xuBcL._RI_SX300_.jpg',
   rating:3
   
@@ -70,8 +65,13 @@ class App extends Component {
       }, 3000)
     }
   
-addMovie=(newmovie)=>{
-this.setState({news:this.state.news.concat(newmovie)})
+    addMovie=(newmovie)=>{
+      this.setState({
+      news:this.state.news.concat(newmovie)})
+}
+remove=(id)=>{
+  this.setState({
+      news:this.state.news.filter((el,index)=>(index!==id))})
 }
   render() {
     return (
@@ -87,6 +87,7 @@ this.setState({news:this.state.news.concat(newmovie)})
        />
        <Liste news={this.state.news}
        isLoading={this.state.isLoading}
+       remove={this.remove}
        
        
        />
